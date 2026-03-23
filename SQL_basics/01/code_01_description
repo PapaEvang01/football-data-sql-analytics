@@ -1,0 +1,57 @@
+File Name: 01_basic_queries.sql
+
+Description:
+This SQL script contains a set of foundational queries used to explore and analyze
+football match data from the Premier League dataset. The main purpose of this file
+is to apply basic SQL techniques on a real-world dataset and answer simple but
+meaningful analytical questions.
+
+
+Objective:
+The script was created as an introductory step in the project, focusing on the use
+of standard SQL functions and basic query structures. It is designed to show how
+raw football data can be transformed into useful information through simple analysis.
+
+
+Topics Covered:
+The queries in this file examine questions such as:
+- How many matches, teams, and seasons are included in the dataset
+- Which matches had the highest number of goals
+- Which matches were the most intense based on cards received
+- Which teams scored the most goals
+- Which teams achieved the highest number of wins
+- How match outcomes are distributed between home wins, away wins, and draws
+- How goals are distributed across matches
+- How the number of matches changes by year
+
+
+SQL Concepts Used:
+This file mainly uses simple and essential SQL concepts, including:
+- SELECT
+- COUNT
+- SUM
+- DISTINCT
+- UNION / UNION ALL
+- GROUP BY
+- ORDER BY
+- LIMIT
+- CASE WHEN
+- Basic date extraction with strftime()
+
+
+Approach:
+The goal was not only to practice SQL syntax, but also to answer real analytical
+questions using football data. The script keeps the logic simple and readable, making
+it suitable as a starting point for more advanced analysis in later files.
+
+
+Results:
+The output of these queries is stored separately in another folder. By reviewing the
+results, anyone can identify useful patterns and draw conclusions about team
+performance, scoring trends, match intensity, and outcome distribution.
+
+
+Notes:
+This file represents the first stage of the project and focuses on clear, structured,
+and practical SQL analysis. It serves as the foundation for future expansion into
+more advanced queries, deeper insights, and broader football data analytics.

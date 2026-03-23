@@ -1,0 +1,107 @@
+File Name: results_01_description.txt
+
+Description:
+This file summarizes the results produced from the queries in
+01_basic_queries.sql. Each output is visualized as an image and represents
+a specific analytical question applied to the Premier League dataset.
+
+
+Results Overview:
+
+total_matches_teams_seasons.png
+Displays the total number of matches, teams, and seasons in the dataset.
+- Total Matches: 4070
+- Total Teams: 37
+- Total Seasons: 11
+
+This confirms that the dataset covers a full decade of Premier League data
+with consistent participation of multiple teams.
+
+
+top_10_matches_with_most_goals.png
+Shows the matches with the highest number of total goals.
+Notable observations:
+- Several matches reached 9–10 total goals
+- High-scoring games often involve top attacking teams
+
+top_10_matches_with_most_cards.png
+Displays matches with the highest number of yellow and red cards.
+Notable observations:
+- Some matches reached up to 12 total cards
+- These games indicate highly aggressive or high-pressure encounters
+
+
+teams_with_most_goals.png
+Ranks teams based on total goals scored.
+Top teams include:
+- Manchester City (914 goals)
+- Liverpool (775 goals)
+- Arsenal (737 goals)
+
+Conclusion:
+Teams like Manchester City and Liverpool dominate offensively, reflecting
+their attacking playstyle and consistency over the years.
+
+
+teams_with_most_wins.png
+Ranks teams based on total number of wins.
+Top teams include:
+- Manchester City (275 wins)
+- Manchester United (232 wins)
+- Chelsea (229 wins)
+
+Conclusion:
+Manchester City leads both in goals and wins, indicating overall dominance.
+Manchester United and Chelsea also show strong long-term performance.
+
+
+draws_homewins_awaywins.png
+Shows the distribution of match outcomes:
+- Home Wins: 1835 matches
+- Away Wins: 1235 matches
+- Draws: 1000 matches
+
+Conclusion:
+Home teams have a clear advantage, winning significantly more matches than
+away teams. Draws are the least frequent outcome, confirming that most matches
+result in a decisive winner.
+
+
+goals_more_exactly_fewer_3goals.png
+Shows the distribution of matches based on total goals:
+- More than 3 goals: 1216 matches
+- Exactly 3 goals: 915 matches
+- Fewer than 3 goals: 1939 matches
+
+Conclusion:
+Most matches are low-scoring, with fewer than 3 goals, which aligns with
+typical football match patterns.
+
+
+matches_per_year.png
+Displays the number of matches per year.
+Observations:
+- Most seasons have around 370–400 matches
+- 2020 and 2021 show lower values
+
+Conclusion:
+The drop in later years likely reflects incomplete data or external factors
+affecting the number of matches played.
+
+
+Overall Insights:
+
+- Manchester City is the most dominant team in the dataset, leading in both
+  total goals and total wins.
+- Offensive performance is concentrated among a few top teams.
+- Home advantage is clearly visible, with more home wins than away wins.
+- Most matches are relatively low-scoring, with high-scoring games being rare.
+- Certain matches stand out for extreme intensity, reflected in high card counts.
+- The dataset provides a balanced view of both performance and match dynamics
+  across multiple seasons.
+
+
+Notes:
+These results demonstrate how simple SQL queries can generate meaningful
+insights from raw data. The analysis serves as a foundation for more advanced
+analytics and deeper exploration in later stages of the project.
