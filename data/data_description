@@ -1,126 +1,44 @@
-DATASET DESCRIPTION
+Dataset Name: Premier League Matches (2010–2020)
 
-This dataset contains detailed statistics for football matches in the English Premier League from 2010 to 2020.
-
-Each row represents a single match, including both home and away team performance metrics, 
-as well as the final match outcome. The dataset enables comprehensive analysis of team performance, match dynamics, and statistical trends across seasons.
-
-
-GENERAL INFORMATION
-
-X --> Unique identifier for each match
-
-season --> Season in which the match was played
-
-date
-Date of the match
-
-home_team
-Name of the home team
-
-away_team
-Name of the away team
+Description:
+The Premier League Matches dataset contains detailed statistics for football matches
+played between 2010 and 2020. Each record represents a single match and includes
+performance metrics for both the home and away teams. The dataset captures key
+aspects of gameplay such as passing, possession, shots, fouls, and defensive actions,
+providing a comprehensive view of match dynamics.
 
 
-HOME TEAM STATISTICS
-
-home_clearances
-Number of clearances made by the home team
-
-home_corners
-Number of corner kicks
-
-home_fouls_conceded
-Number of fouls committed
-
-home_offsides
-Number of offsides
-
-home_passes
-Total number of passes made
-
-home_possession
-Ball possession percentage
-
-home_red_cards
-Number of red cards received
-
-home_shots
-Total number of shots
-
-home_shots_on_target
-Number of shots on target
-
-home_tackles
-Number of tackles made
-
-home_touches
-Total number of touches
-
-home_yellow_cards
-Number of yellow cards received
+Match Structure:
+Each row corresponds to one match and includes:
+- General match information (season, date, teams)
+- Home team statistics
+- Away team statistics
+- Final match outcome
 
 
-AWAY TEAM STATISTICS
-
-away_clearances
-Number of clearances made by the away team
-
-away_corners
-Number of corner kicks
-
-away_fouls_conceded
-Number of fouls committed
-
-away_offsides
-Number of offsides
-
-away_passes
-Total number of passes made
-
-away_possession
-Ball possession percentage
-
-away_red_cards
-Number of red cards received
-
-away_shots
-Total number of shots
-
-away_shots_on_target
-Number of shots on target
-
-away_tackles
-Number of tackles made
-
-away_touches
-Total number of touches
-
-away_yellow_cards
-Number of yellow cards received
+Key Features:
+The dataset includes numerical and categorical features such as:
+- Passing and possession metrics
+- Offensive statistics (shots, shots on target, goals)
+- Defensive actions (tackles, clearances)
+- Discipline indicators (fouls, yellow/red cards)
 
 
-MATCH OUTCOME
-
-goal_home_ft
-Full-time goals scored by the home team
-
-goal_away_ft
-Full-time goals scored by the away team
-
-sg_match_ft
-Goal difference (home team goals minus away team goals)
-
-result
-Final match result (Home Win, Draw, Away Win)
+Outcome Representation:
+Match results are defined using:
+- goal_home_ft: goals scored by the home team
+- goal_away_ft: goals scored by the away team
+- sg_match_ft: goal difference (home − away)
+- result: final outcome (Home Win, Draw, Away Win)
 
 
-NOTES
+Class Distribution:
+- Home Wins: majority of matches
+- Away Wins: slightly fewer than home wins
+- Draws: least frequent outcome
 
-- The dataset includes both offensive and defensive metrics for each team.
-- Possession values are expressed as percentages.
-- The dataset is suitable for:
-  - Performance analysis
-  - Statistical exploration
-  - SQL-based analytics projects
-  - Predictive modeling and machine learning (future extension)
+
+Notes:
+The dataset supports a wide range of analytical tasks, including performance analysis,
+trend exploration, and predictive modeling. It is well-suited for SQL-based analytics
+and can be extended to machine learning applications such as match outcome prediction.
