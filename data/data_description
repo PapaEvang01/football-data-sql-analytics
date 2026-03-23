@@ -1,1 +1,126 @@
+DATASET DESCRIPTION
 
+This dataset contains detailed statistics for football matches in the English Premier League from 2010 to 2020.
+
+Each row represents a single match, including both home and away team performance metrics, 
+as well as the final match outcome. The dataset enables comprehensive analysis of team performance, match dynamics, and statistical trends across seasons.
+
+
+GENERAL INFORMATION
+
+X --> Unique identifier for each match
+
+season --> Season in which the match was played
+
+date
+Date of the match
+
+home_team
+Name of the home team
+
+away_team
+Name of the away team
+
+
+HOME TEAM STATISTICS
+
+home_clearances
+Number of clearances made by the home team
+
+home_corners
+Number of corner kicks
+
+home_fouls_conceded
+Number of fouls committed
+
+home_offsides
+Number of offsides
+
+home_passes
+Total number of passes made
+
+home_possession
+Ball possession percentage
+
+home_red_cards
+Number of red cards received
+
+home_shots
+Total number of shots
+
+home_shots_on_target
+Number of shots on target
+
+home_tackles
+Number of tackles made
+
+home_touches
+Total number of touches
+
+home_yellow_cards
+Number of yellow cards received
+
+
+AWAY TEAM STATISTICS
+
+away_clearances
+Number of clearances made by the away team
+
+away_corners
+Number of corner kicks
+
+away_fouls_conceded
+Number of fouls committed
+
+away_offsides
+Number of offsides
+
+away_passes
+Total number of passes made
+
+away_possession
+Ball possession percentage
+
+away_red_cards
+Number of red cards received
+
+away_shots
+Total number of shots
+
+away_shots_on_target
+Number of shots on target
+
+away_tackles
+Number of tackles made
+
+away_touches
+Total number of touches
+
+away_yellow_cards
+Number of yellow cards received
+
+
+MATCH OUTCOME
+
+goal_home_ft
+Full-time goals scored by the home team
+
+goal_away_ft
+Full-time goals scored by the away team
+
+sg_match_ft
+Goal difference (home team goals minus away team goals)
+
+result
+Final match result (Home Win, Draw, Away Win)
+
+
+NOTES
+
+- The dataset includes both offensive and defensive metrics for each team.
+- Possession values are expressed as percentages.
+- The dataset is suitable for:
+  - Performance analysis
+  - Statistical exploration
+  - SQL-based analytics projects
+  - Predictive modeling and machine learning (future extension)
