@@ -100,6 +100,17 @@ Overall Insights:
 - The dataset provides a balanced view of both performance and match dynamics
   across multiple seasons.
 
+Analyst Perspective:
+
+The results show that Manchester City is the most consistent and dominant team,
+leading both in goals scored and total wins.
+There is also a clear home advantage, as home teams win more matches than away teams.
+Most matches are low-scoring, with fewer than 3 goals, which reflects typical
+football match patterns.
+High-scoring and high-card matches are less common, but they highlight extreme
+cases of offensive performance and match intensity.
+Overall, even simple SQL analysis can reveal important patterns about team
+performance and match behavior in football.
 
 Notes:
 These results demonstrate how simple SQL queries can generate meaningful
