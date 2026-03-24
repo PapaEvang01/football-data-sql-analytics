@@ -1,152 +1,237 @@
 -- =====================================================
 -- 01_basic_queries.sql
--- Football Data SQL Analytics Project
+-- =====================================================
+
+-- =====================================================
+-- SECTION 1: DATASET OVERVIEW
 --
 -- Description:
--- This script contains fundamental SQL queries used to
--- explore and analyze football match data.
+-- This section provides a high-level summary of the dataset,
+-- including its size, structure, and temporal coverage.
 -- =====================================================
 
 
 -- =====================================================
--- SECTION 1: OVERVIEW METRICS
--- Total matches, teams, and seasons
+-- 1.1 OVERALL DATASET METRICS
 -- =====================================================
+-- This query compiles key dataset indicators into a single
+-- result table using UNION ALL.
+--
+-- Included metrics:
+--   • Total number of matches
+--   • Total number of seasons
+--   • Total number of unique teams
+--   • Average number of matches per season
+
+-- Total number of matches
 SELECT 'Total Matches' AS metric, COUNT(*) AS value
 FROM matches
 
 UNION ALL
 
-SELECT 'Total Teams' AS metric, COUNT(*) AS value
-FROM (
-    SELECT home_team FROM matches
-    UNION
-    SELECT away_team FROM matches
-)
+-- Total number of seasons
+SELECT 'Total Seasons', COUNT(DISTINCT season)
+FROM matches
 
 UNION ALL
 
-SELECT 'Total Seasons' AS metric, COUNT(DISTINCT season) AS value
+-- Total number of unique teams (home + away)
+SELECT 'Total Teams', COUNT(*)
+FROM (
+    SELECT home_team AS team FROM matches
+    UNION
+    SELECT away_team AS team FROM matches
+) AS all_teams
+
+UNION ALL
+
+-- Average number of matches per season
+SELECT 'Average Matches per Season',
+       ROUND(COUNT(*) * 1.0 / COUNT(DISTINCT season), 2)
 FROM matches;
 
 
 -- =====================================================
--- SECTION 2: HIGH-SCORING MATCHES
--- Top 10 matches with the most goals
+-- 1.2 DATASET DATE RANGE
 -- =====================================================
-SELECT
-    date,
-    season,
-    home_team,
-    away_team,
-    goal_home_ft,
-    goal_away_ft,
-    (goal_home_ft + goal_away_ft) AS total_goals
+-- This query identifies the time span of the dataset by
+-- retrieving the earliest and latest recorded match dates.
+
+SELECT 'First Match' AS match, MIN(date) AS date
 FROM matches
-ORDER BY total_goals DESC
-LIMIT 10;
+
+UNION ALL
+
+SELECT 'Last Match', MAX(date)
+FROM matches;
+
 
 
 -- =====================================================
--- SECTION 3: MOST INTENSE MATCHES
--- Based on total cards (yellow + red)
+-- SECTION 2: GOALS & SCORING
+--
+-- Description:
+-- This section examines scoring behavior across matches,
+-- providing insights into goal frequency and distribution.
 -- =====================================================
-SELECT
-    date,
-    season,
-    home_team,
-    away_team,
-    home_yellow_cards,
-    away_yellow_cards,
-    home_red_cards,
-    away_red_cards,
-    (
-        home_yellow_cards + away_yellow_cards +
-        home_red_cards + away_red_cards
-    ) AS total_cards
+
+
+-- =====================================================
+-- 2.1 OVERALL GOAL METRICS
+-- =====================================================
+-- This query summarizes overall scoring using two key metrics:
+--   • Total goals scored across all matches
+--   • Average goals per match
+
+SELECT 'Total Goals' AS metric,
+       SUM(goal_home_ft + goal_away_ft) AS value
 FROM matches
-ORDER BY total_cards DESC
-LIMIT 10;
+
+UNION ALL
+
+SELECT 'Average Goals per Match',
+       ROUND(AVG(goal_home_ft + goal_away_ft), 2)
+FROM matches;
 
 
 -- =====================================================
--- SECTION 4: TEAM PERFORMANCE ANALYSIS
+-- 2.2 SCORING DISTRIBUTION
+-- =====================================================
+-- This query categorizes matches based on total goals scored,
+-- helping to distinguish between low- and high-scoring games.
+
+SELECT '0-0 Matches' AS metric,
+       COUNT(*) AS value
+FROM matches
+WHERE goal_home_ft = 0 AND goal_away_ft = 0
+
+UNION ALL
+
+SELECT 'Matches with > 3 Goals',
+       COUNT(*)
+FROM matches
+WHERE (goal_home_ft + goal_away_ft) > 3
+
+UNION ALL
+
+SELECT 'Matches with = 3 Goals',
+       COUNT(*)
+FROM matches
+WHERE (goal_home_ft + goal_away_ft) = 3
+
+UNION ALL
+
+SELECT 'Matches with < 3 Goals',
+       COUNT(*)
+FROM matches
+WHERE (goal_home_ft + goal_away_ft) < 3;
+
+
+
+-- =====================================================
+-- SECTION 3: MATCH OUTCOMES
+--
+-- Description:
+-- This section analyzes match results, focusing on the
+-- distribution of outcomes and evaluating home advantage.
 -- =====================================================
 
--- 4A. Teams with most goals scored
+
+-- =====================================================
+-- 3.1 MATCH RESULTS DISTRIBUTION
+-- =====================================================
+-- This query counts the number of matches that ended as:
+--   • Home wins
+--   • Away wins
+--   • Draws
+
 SELECT
-    team_name,
-    SUM(goals_scored) AS total_goals
-FROM (
-    SELECT home_team AS team_name, goal_home_ft AS goals_scored
-    FROM matches
-
-    UNION ALL
-
-    SELECT away_team AS team_name, goal_away_ft AS goals_scored
-    FROM matches
-) AS all_goals
-GROUP BY team_name
-ORDER BY total_goals DESC
-LIMIT 10;
-
-
--- 4B. Teams with most wins
-SELECT
-    team_name,
-    COUNT(*) AS total_wins
-FROM (
-    SELECT home_team AS team_name
-    FROM matches
-    WHERE goal_home_ft > goal_away_ft
-
-    UNION ALL
-
-    SELECT away_team AS team_name
-    FROM matches
-    WHERE goal_away_ft > goal_home_ft
-) AS winning_teams
-GROUP BY team_name
-ORDER BY total_wins DESC
-LIMIT 10;
+    CASE
+        WHEN goal_home_ft > goal_away_ft THEN 'Home Win'
+        WHEN goal_home_ft < goal_away_ft THEN 'Away Win'
+        ELSE 'Draw'
+    END AS result,
+    COUNT(*) AS total_matches
+FROM matches
+GROUP BY result
+ORDER BY total_matches DESC;
 
 
 -- =====================================================
--- SECTION 5: MATCH OUTCOMES DISTRIBUTION
+-- 3.2 RESULT PERCENTAGES
 -- =====================================================
-SELECT 'Draws' AS metric, COUNT(*) AS value
+-- This query calculates the percentage distribution of
+-- match outcomes, allowing comparison between home wins,
+-- away wins, and draws.
+
+SELECT 'Draw Percentage' AS metric,
+       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM matches), 2) AS value
 FROM matches
 WHERE goal_home_ft = goal_away_ft
 
 UNION ALL
 
-SELECT 'Home Wins' AS metric, COUNT(*) AS value
+SELECT 'Home Win Percentage',
+       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM matches), 2)
 FROM matches
 WHERE goal_home_ft > goal_away_ft
 
 UNION ALL
 
-SELECT 'Away Wins' AS metric, COUNT(*) AS value
+SELECT 'Away Win Percentage',
+       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM matches), 2)
 FROM matches
 WHERE goal_home_ft < goal_away_ft;
 
 
+
 -- =====================================================
--- SECTION 6: GOAL DISTRIBUTION ANALYSIS
+-- SECTION 4: DISCIPLINE (CARDS)
+--
+-- Description:
+-- This section evaluates disciplinary aspects of matches,
+-- focusing on yellow and red cards as indicators of match
+-- intensity and referee intervention.
 -- =====================================================
-SELECT
-    SUM(CASE WHEN (goal_home_ft + goal_away_ft) > 3 THEN 1 ELSE 0 END) AS more_than_3,
-    SUM(CASE WHEN (goal_home_ft + goal_away_ft) = 3 THEN 1 ELSE 0 END) AS exactly_3,
-    SUM(CASE WHEN (goal_home_ft + goal_away_ft) < 3 THEN 1 ELSE 0 END) AS less_than_3
-FROM matches;
 
 
 -- =====================================================
--- SECTION 7: MATCHES PER YEAR
+-- 4.1 OVERALL CARD METRICS
 -- =====================================================
-SELECT
-    strftime('%Y', date) AS match_year,
-    COUNT(*) AS total_matches
+-- This query summarizes card-related statistics:
+--   • Average total cards per match
+--   • Average yellow cards per match
+--   • Average red cards per match
+--   • Maximum number of cards in a single match
+
+SELECT 'Average Cards per Match' AS metric,
+       ROUND(AVG(
+           home_yellow_cards + away_yellow_cards +
+           home_red_cards + away_red_cards
+       ), 2) AS value
 FROM matches
-GROUP BY strftime('%Y', date)
-ORDER BY match_year;
+
+UNION ALL
+
+SELECT 'Average Yellow Cards per Match',
+       ROUND(AVG(
+           home_yellow_cards + away_yellow_cards
+       ), 2)
+FROM matches
+
+UNION ALL
+
+SELECT 'Average Red Cards per Match',
+       ROUND(AVG(
+           home_red_cards + away_red_cards
+       ), 2)
+FROM matches
+
+UNION ALL
+
+SELECT 'Maximum Cards in a Match',
+       MAX(
+           home_yellow_cards + away_yellow_cards +
+           home_red_cards + away_red_cards
+       )
+FROM matches;
