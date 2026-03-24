@@ -1,118 +1,110 @@
-File Name: results_01_description.txt
+SECTION 1: DATASET OVERVIEW
 
-Description:
-This file summarizes the results produced from the queries in
-01_basic_queries.sql. Each output is visualized as an image and represents
-a specific analytical question applied to the Premier League dataset.
+Questions Answered:
+- How many matches, teams, and seasons are included in the dataset?
+- What is the average number of matches per season?
+- What is the time range of the dataset?
 
+Analysis:
+The dataset contains 4,070 matches across 11 seasons, involving a total of 37 unique teams.
+This indicates a consistent league structure, with an average of 370 matches per season,
+which aligns with typical football league formats.
 
-Results Overview:
+The data spans from 14 August 2010 to 7 March 2021, covering more than a decade of
+football activity. This time range is sufficient to capture long-term trends and
+variations in performance, scoring, and discipline.
 
-total_matches_teams_seasons.png
-Displays the total number of matches, teams, and seasons in the dataset.
-- Total Matches: 4070
-- Total Teams: 37
-- Total Seasons: 11
+Overall, the dataset is well-balanced and complete, making it suitable for reliable analysis.
 
-This confirms that the dataset covers a full decade of Premier League data
-with consistent participation of multiple teams.
+SECTION 2: GOALS & SCORING
 
+Questions Answered:
+- How many goals are scored overall?
+- What is the average number of goals per match?
+- How are goals distributed across matches?
 
-top_10_matches_with_most_goals.png
-Shows the matches with the highest number of total goals.
-Notable observations:
-- Several matches reached 9–10 total goals
-- High-scoring games often involve top attacking teams
+Analysis:
+A total of 11,137 goals were scored across all matches, with an average of 2.74 goals per match.
+This suggests a moderately high-scoring league, where most matches include multiple goals.
 
-top_10_matches_with_most_cards.png
-Displays matches with the highest number of yellow and red cards.
-Notable observations:
-- Some matches reached up to 12 total cards
-- These games indicate highly aggressive or high-pressure encounters
+Looking at the distribution:
+- 1,216 matches had more than 3 goals → high-scoring games
+- 915 matches had exactly 3 goals → balanced scoring
+- 1,939 matches had fewer than 3 goals → lower-scoring games
+- 304 matches ended 0-0 → relatively rare
 
+The majority of matches fall below or around the 3-goal threshold, indicating that while
+high-scoring games do occur, they are not the dominant pattern. The low number of 0-0 matches
+suggests that most games feature at least some offensive activity.
 
-teams_with_most_goals.png
-Ranks teams based on total goals scored.
-Top teams include:
-- Manchester City (914 goals)
-- Liverpool (775 goals)
-- Arsenal (737 goals)
+SECTION 3: MATCH OUTCOMES
 
-Conclusion:
-Teams like Manchester City and Liverpool dominate offensively, reflecting
-their attacking playstyle and consistency over the years.
+Questions Answered:
+- How many matches ended in home wins, away wins, or draws?
+- What percentage of matches fall into each category?
+- Do home teams have an advantage?
 
+Analysis:
+Out of all matches:
+- Home Wins: 1,835
+- Away Wins: 1,235
+- Draws: 1,000
 
-teams_with_most_wins.png
-Ranks teams based on total number of wins.
-Top teams include:
-- Manchester City (275 wins)
-- Manchester United (232 wins)
-- Chelsea (229 wins)
+In percentage terms:
+- Home Wins: 45.09%
+- Away Wins: 30.34%
+- Draws: 24.57%
 
-Conclusion:
-Manchester City leads both in goals and wins, indicating overall dominance.
-Manchester United and Chelsea also show strong long-term performance.
+These results clearly indicate a strong home advantage. Home teams win significantly more
+often than away teams, with a difference of nearly 15 percentage points.
 
+Draws account for roughly one quarter of matches, which is typical in football.
+Overall, the data confirms that playing at home provides a measurable competitive advantage.
 
-draws_homewins_awaywins.png
-Shows the distribution of match outcomes:
-- Home Wins: 1835 matches
-- Away Wins: 1235 matches
-- Draws: 1000 matches
+SECTION 4: DISCIPLINE (CARDS)
 
-Conclusion:
-Home teams have a clear advantage, winning significantly more matches than
-away teams. Draws are the least frequent outcome, confirming that most matches
-result in a decisive winner.
+Questions Answered:
+- What is the average number of cards per match?
+- What is the average number of yellow and red cards?
+- What is the maximum number of cards in a match?
 
+Analysis:
+The average number of cards per match is 3.38, with most of them being yellow cards (3.24).
+Red cards are relatively rare, with an average of only 0.14 per match.
 
-goals_more_exactly_fewer_3goals.png
-Shows the distribution of matches based on total goals:
-- More than 3 goals: 1216 matches
-- Exactly 3 goals: 915 matches
-- Fewer than 3 goals: 1939 matches
+This shows that while fouls and warnings are common, serious infractions leading to red cards
+occur infrequently.
 
-Conclusion:
-Most matches are low-scoring, with fewer than 3 goals, which aligns with
-typical football match patterns.
+The maximum number of cards recorded in a single match is 12, indicating that some matches
+can become highly intense and physically aggressive.
 
+Overall, the data suggests that most matches are moderately controlled in terms of discipline,
+with occasional extreme cases.
 
-matches_per_year.png
-Displays the number of matches per year.
-Observations:
-- Most seasons have around 370–400 matches
-- 2020 and 2021 show lower values
+OVERALL CONCLUSION
 
-Conclusion:
-The drop in later years likely reflects incomplete data or external factors
-affecting the number of matches played.
+The analysis of the Premier League dataset provides a clear overview of match structure,
+scoring behavior, outcomes, and disciplinary patterns over a period of more than a decade.
 
+From a structural perspective, the dataset is consistent and well-balanced, containing
+4,070 matches across 11 seasons with a stable number of teams and matches per season.
+This ensures reliability and comparability across all analyses.
 
-Overall Insights:
+In terms of scoring, the league shows a moderate goal rate, with an average of 2.74 goals
+per match. Most games fall within a typical range of 2–3 goals, while very high-scoring
+matches are less frequent and goalless matches are relatively rare. This indicates a
+balanced competition with regular offensive activity.
 
-- Manchester City is the most dominant team in the dataset, leading in both
-  total goals and total wins.
-- Offensive performance is concentrated among a few top teams.
-- Home advantage is clearly visible, with more home wins than away wins.
-- Most matches are relatively low-scoring, with high-scoring games being rare.
-- Certain matches stand out for extreme intensity, reflected in high card counts.
-- The dataset provides a balanced view of both performance and match dynamics
-  across multiple seasons.
+The analysis of match outcomes highlights a clear home advantage. Home teams win nearly
+45% of matches, significantly more than away teams (30%), while draws account for around
+25%. This confirms that playing at home has a measurable impact on performance.
 
-Analyst Perspective:
+Regarding discipline, matches are generally controlled, with an average of 3.38 cards per
+game, most of which are yellow cards. Red cards occur infrequently, indicating that severe
+infractions are relatively rare, although occasional high-intensity matches can produce
+extreme values.
 
-The results show that Manchester City is the most consistent and dominant team,
-leading both in goals scored and total wins.
-There is also a clear home advantage, as home teams win more matches than away teams.
-Most matches are low-scoring, with fewer than 3 goals, which reflects typical
-football match patterns.
-High-scoring and high-card matches are less common, but they highlight extreme
-cases of offensive performance and match intensity.
-Overall, even simple SQL analysis can reveal important patterns about team
-performance and match behavior in football.
-
-Notes:
-These results demonstrate how simple SQL queries can generate meaningful
-insights from raw data. The analysis serves as a foundation for more advanced
-analytics and deeper exploration in later stages of the project.
+Overall, the dataset reveals a competitive and balanced league, characterized by moderate
+scoring, a noticeable home advantage, and controlled levels of discipline. These findings
+provide a solid foundation for deeper analysis, such as team performance evaluation,
+trend analysis, and predictive modeling.
