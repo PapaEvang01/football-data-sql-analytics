@@ -1,0 +1,16 @@
+Description:
+This SQL script contains a collection of basic analytical queries used to explore
+Premier League match data. Its purpose is to transform raw football records into
+clear summary metrics related to dataset size, scoring, match outcomes, and match
+discipline.
+
+The script relies on core SQL functions and operators such as COUNT(), SUM(),
+AVG(), MAX(), ROUND(), and DISTINCT to calculate totals, averages, and extreme
+values. It also uses UNION ALL to combine multiple summary results into a single
+output, CASE WHEN to classify match outcomes, and GROUP BY / ORDER BY to organize
+aggregated results. Simple arithmetic operations are applied to combine related
+columns, such as home and away goals or cards.
+
+These functions are used because they provide an efficient and readable way to
+summarize football data, identify patterns, and answer practical analytical
+questions using straightforward SQL logic.

@@ -1,3 +1,4 @@
+**------------------------------------------------------------------**
 SECTION 1: DATASET OVERVIEW
 
 Questions Answered:
@@ -16,6 +17,7 @@ variations in performance, scoring, and discipline.
 
 Overall, the dataset is well-balanced and complete, making it suitable for reliable analysis.
 
+**------------------------------------------------------------------**
 SECTION 2: GOALS & SCORING
 
 Questions Answered:
@@ -37,6 +39,7 @@ The majority of matches fall below or around the 3-goal threshold, indicating th
 high-scoring games do occur, they are not the dominant pattern. The low number of 0-0 matches
 suggests that most games feature at least some offensive activity.
 
+**------------------------------------------------------------------**
 SECTION 3: MATCH OUTCOMES
 
 Questions Answered:
@@ -61,6 +64,7 @@ often than away teams, with a difference of nearly 15 percentage points.
 Draws account for roughly one quarter of matches, which is typical in football.
 Overall, the data confirms that playing at home provides a measurable competitive advantage.
 
+**------------------------------------------------------------------**
 SECTION 4: DISCIPLINE (CARDS)
 
 Questions Answered:
@@ -81,6 +85,8 @@ can become highly intense and physically aggressive.
 Overall, the data suggests that most matches are moderately controlled in terms of discipline,
 with occasional extreme cases.
 
+**------------------------------------------------------------------**
+**------------------------------------------------------------------**
 OVERALL CONCLUSION
 
 The analysis of the Premier League dataset provides a clear overview of match structure,
