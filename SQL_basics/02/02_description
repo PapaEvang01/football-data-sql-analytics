@@ -1,0 +1,40 @@
+=====================================================
+02_team_performance.sql
+=====================================================
+
+Description:
+This SQL script focuses on team-level performance analysis
+using football match data. It transforms raw match results
+into structured summaries that evaluate how each team performs
+across multiple dimensions.
+
+The analysis is divided into four main sections:
+
+1. Overall Team Performance:
+   Calculates total matches, wins, losses, and draws for each team.
+
+2. Home vs Away Performance:
+   Compares team results depending on match location, highlighting
+   differences between home and away performance.
+
+3. Goals Analysis:
+   Evaluates offensive and defensive strength using total goals scored,
+   goals conceded, goal difference, and average goals per match.
+
+4. Strong & Weak Teams:
+   Measures team efficiency using win rate percentage, with a minimum
+   match threshold to ensure reliable comparisons.
+
+Techniques Used:
+The script uses core SQL concepts such as:
+- COUNT() and SUM() for aggregations
+- CASE WHEN for result classification
+- UNION ALL to combine home and away data
+- GROUP BY and ORDER BY for structured analysis
+- HAVING to filter statistically significant results
+
+Purpose:
+The goal of this script is to move beyond basic statistics and
+provide meaningful insights into team performance, enabling
+comparisons between teams in terms of success, consistency,
+and overall effectiveness.

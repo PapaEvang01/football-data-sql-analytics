@@ -1,0 +1,104 @@
+=====================================================
+RESULTS & ANALYSIS – TEAM PERFORMANCE
+=====================================================
+
+This section presents the results derived from the four main analytical
+queries, focusing on overall performance, home vs away behavior,
+goal statistics, and win rate efficiency.
+
+
+-----------------------------------------------------
+1. Overall Team Performance
+-----------------------------------------------------
+
+The analysis shows that top teams such as Manchester City,
+Manchester United, Chelsea, and Liverpool consistently appear
+at the top in terms of total wins.
+
+Manchester City clearly stands out as the strongest team, with
+the highest number of wins and a relatively low number of losses,
+indicating both dominance and consistency.
+
+Other teams like Tottenham Hotspur and Arsenal also show strong
+performance, although with slightly higher losses and fewer wins,
+suggesting less stability compared to the top-ranked team.
+
+
+-----------------------------------------------------
+2. Home vs Away Performance
+-----------------------------------------------------
+
+The data reveals that most teams perform significantly better
+at home than away.
+
+Manchester City demonstrates a strong home advantage, with
+fewer home losses compared to away losses. This pattern is
+consistent across most top teams, confirming that home-field
+advantage plays an important role in match outcomes.
+
+Some teams show a noticeable gap between home and away
+performance, indicating reliance on home conditions, while
+others (like top-tier teams) maintain relatively strong
+performance in both environments.
+
+
+-----------------------------------------------------
+3. Goals Analysis (Offense vs Defense)
+-----------------------------------------------------
+
+From an offensive perspective, Manchester City again leads
+with the highest number of goals scored and the highest average
+goals per match (~2.24), indicating a very strong attacking style.
+
+Liverpool and Arsenal also rank highly in scoring, showing
+consistent offensive capability.
+
+Defensively, teams with lower goals conceded and higher goal
+difference tend to overlap with the top-performing teams,
+highlighting the importance of balance between attack and defense.
+
+Goal difference proves to be a strong indicator of overall team
+strength, as top teams consistently maintain positive margins.
+
+
+-----------------------------------------------------
+4. Strong & Weak Teams (Win Rate)
+-----------------------------------------------------
+
+Win rate analysis provides the clearest measure of team efficiency.
+
+Manchester City leads with a win rate of approximately 67%,
+significantly higher than other teams, confirming its dominance.
+
+Other top teams such as Manchester United, Chelsea, and Liverpool
+follow, but with noticeably lower win rates (~54–57%), indicating
+a performance gap from the top.
+
+The use of a minimum match threshold ensures that the results are
+statistically reliable and not influenced by small sample sizes.
+
+
+-----------------------------------------------------
+FINAL CONCLUSION
+-----------------------------------------------------
+
+Across all four analyses, a consistent pattern emerges:
+
+Manchester City is the most dominant and consistent team in the dataset,
+leading in wins, goal scoring, and win rate.
+
+Top-performing teams are characterized by:
+- High number of wins
+- Strong offensive output
+- Positive goal difference
+- Consistent performance both home and away
+
+In contrast, weaker teams tend to:
+- Have lower win rates
+- Concede more goals
+- Show higher variability between home and away performance
+
+Overall, the analysis demonstrates that successful teams are not only
+defined by winning more matches, but also by maintaining a balance
+between offensive strength, defensive stability, and consistency
+across different match conditions.
