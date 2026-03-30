@@ -15,12 +15,16 @@ The analysis shows that the most frequent matchups reach
 around 21–22 matches, meaning these teams have played
 against each other consistently over many seasons.
 
-These matchups mainly involve top teams such as Arsenal,
-Manchester United, Chelsea, Liverpool, and Manchester City,
-indicating stable participation in the league.
+Examples include:
+Arsenal vs Manchester United,
+Chelsea vs Liverpool,
+and Manchester City vs Tottenham Hotspur.
+
+These matchups mainly involve top teams, indicating
+stable participation and long-term presence in the league.
 
 The small difference in match counts suggests that most
-top teams have similar presence and longevity.
+top teams have similar longevity.
 
 Overall, these matchups represent the core rivalries of
 the dataset.
@@ -31,14 +35,16 @@ the dataset.
 
 Looking at the results (wins and draws), we observe that:
 
-Many matchups are relatively balanced, with both teams
-having a similar number of wins.
+Many matchups are relatively balanced. For example,
+Arsenal vs Liverpool and Chelsea vs Manchester United
+show similar win counts for both teams.
 
-In some cases, one team has a clear advantage, showing
-historical dominance in that matchup.
+In other cases, one team has a clear advantage. Some
+matchups show consistent dominance by one side over time.
 
-Draws appear quite frequently, especially between strong
-teams, suggesting close and competitive games.
+Draws appear quite frequently, especially in games
+between strong teams, such as Liverpool vs Manchester
+City, indicating close and competitive matches.
 
 Overall, this section shows that some rivalries are
 balanced, while others are more one-sided.
@@ -50,19 +56,21 @@ balanced, while others are more one-sided.
 This section examines how many goals are scored in each
 matchup.
 
-From the results:
-
 Some matchups have a high total number of goals, mainly
-because they are played many times.
+because they are played many times. For example,
+Manchester United vs Everton accumulates many goals due
+to frequent encounters.
 
-When looking at average goals per match, we can better
-understand how attacking or open a matchup is.
+When looking at average goals per match, we get a better
+understanding of how open or attacking a matchup is.
 
-Some matchups show high averages (3+ goals), indicating
-more open games, while others are more controlled.
+Certain matchups show high averages (around 3+ goals),
+indicating more attacking games, while others remain more
+controlled and tactical.
 
-For the most frequent matchups, average goals tend to be
-moderate, showing a balance between attack and defense.
+For the most frequent matchups, such as Chelsea vs
+Tottenham, the average goals tend to be moderate,
+suggesting a balance between attack and defense.
 
 ------------------------------------------------------
 4. Goal Difference Analysis
@@ -70,20 +78,23 @@ moderate, showing a balance between attack and defense.
 
 This section focuses on how close or one-sided matches are.
 
-From the results:
+High total goal difference is often seen in matchups
+played many times, especially when one team has been
+historically stronger.
 
-High total goal difference usually comes from matchups
-played many times, often with one team being stronger.
-
-Average goal difference gives a better view of
+Average goal difference gives a clearer picture of
 competitiveness.
 
-Low average values mean close games, while higher values
-indicate more one-sided matches.
+Low average values (close to 1 goal) indicate tight
+matches, such as Arsenal vs Tottenham, where games are
+often decided by small margins.
 
-For the most frequent matchups, the average goal
-difference is generally low, meaning these games are
-usually competitive.
+Higher values indicate more one-sided matchups, where
+one team wins more comfortably.
+
+For most frequent matchups, the average goal difference
+remains relatively low, meaning these games are generally
+competitive.
 
 ------------------------------------------------------
 FINAL CONCLUSION
@@ -92,17 +103,17 @@ FINAL CONCLUSION
 This analysis shows that:
 
 The most frequent matchups involve top teams with
-consistent participation.
+consistent participation across seasons.
 
 Many of these matchups are balanced and competitive,
 with similar win counts and frequent draws.
 
-Some matchups are more attacking, while others are more
-controlled in terms of goals.
+Some matchups are more attacking and produce higher
+average goals, while others are more controlled.
 
-Even when one team has long-term dominance, most games
-are still decided by small margins.
+Even in cases of long-term dominance, most matches are
+still decided by small differences.
 
 Overall, combining frequency, results, and goal analysis
-provides a clearer understanding of team rivalries and
-match behavior.
+provides a clearer and more complete understanding of
+team rivalries and match behavior.

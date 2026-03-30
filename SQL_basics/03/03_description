@@ -1,0 +1,98 @@
+======================================================
+03_matchup_analysis.sql – DESCRIPTION
+======================================================
+
+Description:
+This SQL script focuses on analyzing team matchups
+(head-to-head games) in the dataset.
+
+While previous scripts (01 and 02) examined the dataset
+at a general and team level, this script moves one step
+further by analyzing how teams perform specifically
+against each other.
+
+The goal is to understand:
+- which teams play most often
+- how these matchups usually end
+- how many goals they produce
+- and how competitive these games are
+
+
+------------------------------------------------------
+Structure of the Script
+------------------------------------------------------
+
+The script is organized into four main sections:
+
+1. Most Frequent Matchups
+   Identifies the top 20 team pairs that appear most
+   often in the dataset.
+
+2. Matchup Outcomes
+   Analyzes results for these matchups, showing wins
+   for each team and number of draws.
+
+3. Goal Analysis
+   Examines scoring behavior using:
+   - total goals (volume)
+   - average goals (intensity)
+   - goal analysis for top matchups
+
+4. Goal Difference Analysis
+   Evaluates how balanced or one-sided matchups are
+   using total and average goal difference.
+
+
+------------------------------------------------------
+Key Results (Summary)
+------------------------------------------------------
+
+The results show that the most frequent matchups involve
+top teams such as Arsenal, Chelsea, Liverpool,
+Manchester United, and Manchester City.
+
+These matchups tend to:
+- occur consistently across seasons
+- be relatively balanced in terms of wins
+- include a significant number of draws
+
+In terms of scoring:
+- some matchups are high-scoring and open
+- others are more controlled with moderate goals
+
+Goal difference analysis shows that:
+- most frequent matchups are generally competitive
+- even when one team is stronger, matches are often
+  decided by small margins
+
+
+------------------------------------------------------
+Connection to Other Scripts
+------------------------------------------------------
+
+This script builds directly on:
+
+01_basic_queries.sql
+→ which provides a general overview of the dataset
+
+02_team_performance.sql
+→ which analyzes team-level performance (wins, losses,
+  goals, home vs away)
+
+03_matchup_analysis.sql
+→ focuses on pairwise interactions between teams,
+  completing the analysis by examining rivalries and
+  head-to-head behavior
+
+
+------------------------------------------------------
+Conclusion
+------------------------------------------------------
+
+This script adds an important layer to the project by
+moving from general statistics to detailed matchup
+analysis.
+
+It shows not only how teams perform overall, but also
+how they perform against specific opponents, providing
+a more complete and realistic view of the data.
