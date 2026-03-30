@@ -164,7 +164,7 @@ ORDER BY
 -- It includes:
 --   3.1 Top 20 matchups by total goals scored
 --   3.2 Top 20 matchups by average goals per match
---   3.3 Goal analysis for top 20 matchups
+--   3.3 Top 20 matchups goal analysis
 -- =====================================================
 
 
@@ -203,16 +203,15 @@ GROUP BY team_1, team_2
 ORDER BY total_goals DESC
 LIMIT 20;
 
-
 -- =====================================================
--- SECTION 3.2: TOP 20 MATCHUPS BY AVERAGE GOALS
+-- SECTION 3.2: TOP 20 HIGH-SCORING MATCHUPS (FILTERED)
 --
 -- Description:
--- This query shows the top 20 team matchups with the
--- highest average number of goals per match.
+-- This query shows the top 20 matchups with the highest
+-- average number of goals per match.
 --
--- Only matchups with at least 5 matches are included,
--- so that the results are more meaningful.
+-- Only matchups with at least 10 matches are included,
+-- ensuring more reliable and meaningful results.
 -- =====================================================
 
 WITH matchups AS (
@@ -238,9 +237,74 @@ SELECT
     ROUND(AVG(goal_home_ft + goal_away_ft), 2) AS avg_goals
 FROM matchups
 GROUP BY team_1, team_2
-HAVING COUNT(*) >= 5
+HAVING COUNT(*) >= 10
 ORDER BY avg_goals DESC
 LIMIT 20;
+
+-- =====================================================
+-- SECTION 3.3: GOAL ANALYSIS FOR TOP 20 MATCHUPS
+--
+-- Description:
+-- This query focuses on the 20 most frequent matchups
+-- and analyzes their scoring behavior:
+--   - number of matches
+--   - total goals
+--   - average goals per match
+--
+-- Team pairs are normalized so that (A vs B) = (B vs A).
+-- =====================================================
+
+WITH matchups AS (
+    SELECT
+        CASE
+            WHEN home_team < away_team THEN home_team
+            ELSE away_team
+        END AS team_1,
+        CASE
+            WHEN home_team < away_team THEN away_team
+            ELSE home_team
+        END AS team_2,
+        goal_home_ft,
+        goal_away_ft
+    FROM matches
+),
+
+matchup_counts AS (
+    SELECT
+        team_1,
+        team_2,
+        COUNT(*) AS matchup_count
+    FROM matchups
+    GROUP BY team_1, team_2
+),
+
+top_20_matchups AS (
+    SELECT
+        team_1,
+        team_2,
+        matchup_count
+    FROM matchup_counts
+    ORDER BY matchup_count DESC
+    LIMIT 20
+)
+
+SELECT
+    m.team_1,
+    m.team_2,
+    COUNT(*) AS matchup_count,
+    SUM(m.goal_home_ft + m.goal_away_ft) AS total_goals,
+    ROUND(AVG(m.goal_home_ft + m.goal_away_ft), 2) AS avg_goals
+FROM matchups m
+JOIN top_20_matchups t
+    ON m.team_1 = t.team_1
+   AND m.team_2 = t.team_2
+GROUP BY
+    m.team_1,
+    m.team_2
+ORDER BY
+    matchup_count DESC,
+    total_goals DESC;
+	
 
 -- SECTION 3.3: GOAL ANALYSIS FOR TOP 20 MATCHUPS
 --
