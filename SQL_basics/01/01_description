@@ -1,16 +1,38 @@
 Description:
-This SQL script contains a collection of basic analytical queries used to explore
-Premier League match data. Its purpose is to transform raw football records into
-clear summary metrics related to dataset size, scoring, match outcomes, and match
-discipline.
+This SQL script represents the first stage of a football data analysis workflow,
+focusing on transforming raw Premier League match data into structured and
+meaningful insights.
 
-The script relies on core SQL functions and operators such as COUNT(), SUM(),
-AVG(), MAX(), ROUND(), and DISTINCT to calculate totals, averages, and extreme
-values. It also uses UNION ALL to combine multiple summary results into a single
-output, CASE WHEN to classify match outcomes, and GROUP BY / ORDER BY to organize
-aggregated results. Simple arithmetic operations are applied to combine related
-columns, such as home and away goals or cards.
+The main objective is to perform data exploration and summarization, converting
+row-level match records into clear analytical metrics related to dataset structure,
+scoring behavior, match outcomes, and discipline patterns.
 
-These functions are used because they provide an efficient and readable way to
-summarize football data, identify patterns, and answer practical analytical
-questions using straightforward SQL logic.
+The analysis is built using core SQL functions such as COUNT(), SUM(), AVG(),
+MAX(), ROUND(), and DISTINCT to compute totals, averages, and key indicators.
+UNION ALL is used to create compact summary tables, while CASE WHEN is applied
+to classify match results (home win, away win, draw). GROUP BY and ORDER BY are
+used to organize and present aggregated data in a clear and logical way.
+
+Project Structure & Data Outputs:
+The script is organized into four main analytical sections:
+
+- Section 1: Dataset overview (size, teams, seasons, time range)
+- Section 2: Goals and scoring analysis (totals, averages, distributions)
+- Section 3: Match outcomes (wins, draws, percentages, home advantage)
+- Section 4: Discipline (yellow/red cards, averages, extreme values)
+
+Each section produces structured outputs that are exported as CSV files in the
+/results folder. These files represent clean, analysis-ready datasets that can be
+used for further processing in tools such as Excel or Python.
+
+To enhance usability, all individual CSV outputs are also combined into a single
+Excel file (01_all.xlsx), creating a centralized report that summarizes the entire
+analysis in one place.
+
+From a data analytics perspective, this script demonstrates a typical workflow:
+data extraction → aggregation → structured outputs → ready for visualization or
+advanced analysis.
+
+Overall, the focus is on clarity, simplicity, and reproducibility, providing a solid
+foundation for extending the project into deeper analysis, such as team performance,
+matchup evaluation, and predictive modeling.
