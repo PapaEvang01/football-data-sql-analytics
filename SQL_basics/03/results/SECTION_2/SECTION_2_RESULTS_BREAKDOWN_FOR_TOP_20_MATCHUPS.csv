@@ -1,0 +1,21 @@
+team_1,team_2,total_matches,team_1_wins,team_2_wins,draws
+Arsenal,Manchester City,22,4,12,6
+Arsenal,Manchester United,22,6,9,7
+Chelsea,Liverpool,22,5,10,7
+Chelsea,Manchester United,22,6,7,9
+Chelsea,Tottenham Hotspur,22,10,4,8
+Everton,Liverpool,22,2,8,12
+Everton,Manchester United,22,5,10,7
+Liverpool,Manchester City,22,8,8,6
+Liverpool,Tottenham Hotspur,22,12,5,5
+Manchester City,Manchester United,22,10,8,4
+Manchester City,Tottenham Hotspur,22,13,6,3
+Arsenal,Chelsea,21,5,10,6
+Arsenal,Everton,21,12,4,5
+Arsenal,Liverpool,21,5,8,8
+Arsenal,Tottenham Hotspur,21,6,8,7
+Chelsea,Everton,21,10,7,4
+Chelsea,Manchester City,21,8,10,3
+Everton,Manchester City,21,5,11,5
+Everton,Tottenham Hotspur,21,4,9,8
+Liverpool,Manchester United,21,5,9,7
