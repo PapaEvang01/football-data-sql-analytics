@@ -1,0 +1,46 @@
+======================================================
+04_01_general_summary.sql - DESCRIPTION
+======================================================
+
+Description:
+This SQL script provides a unified summary of the entire
+dataset by combining multiple key statistics into a
+single output table.
+
+It builds on the initial exploration (01) by organizing
+all general metrics into a compact and structured format
+that is easier to export and analyze.
+
+The goal is to understand:
+- the overall size and structure of the dataset
+- the scoring behavior across matches
+- how match results are distributed
+- and the level of match intensity through card data
+
+------------------------------------------------------
+Structure of the Script
+------------------------------------------------------
+
+The script is organized as a single query using UNION ALL,
+where each row represents a different metric.
+
+It includes:
+- dataset overview (matches, teams, seasons)
+- date range (first and last match)
+- goal statistics and scoring distribution
+- match outcomes and their percentages
+- card-related metrics
+
+------------------------------------------------------
+CSV Output Description (01_all.csv)
+------------------------------------------------------
+
+The output of this script is a summary table where each
+row represents a specific metric and its corresponding
+value.
+
+This file serves as a general overview of the dataset and
+acts as a foundation for the rest of the project.
+
+It is designed to be simple, readable, and suitable for
+quick inspection and basic visualization in Python.
