@@ -1,0 +1,56 @@
+======================================================
+04_03_matchup_summary.sql - DESCRIPTION
+======================================================
+
+Description:
+This SQL script creates a final summary table that
+analyzes head-to-head matchups between pairs of teams
+across the entire dataset.
+
+It builds on the detailed exploration from 03 by
+combining all important matchup metrics into a single
+structured output.
+
+The goal is to understand:
+- how often teams face each other
+- which team dominates each matchup
+- how frequently matches end in draws
+- and how these matchups behave in terms of scoring,
+  intensity, and overall match activity
+
+------------------------------------------------------
+Structure of the Script
+------------------------------------------------------
+
+The script is implemented as a single aggregated query.
+
+It first normalizes team pairs so that each matchup is
+represented consistently (Team A vs Team B = Team B vs Team A).
+
+Then, it calculates:
+- total matches per matchup
+- wins for each team and number of draws
+- win and draw percentages
+- average goals and goal difference
+- average disciplinary metrics (cards)
+- average match activity metrics (offsides, corners,
+  fouls, and shots)
+
+------------------------------------------------------
+CSV Output Description (matchup_summary.csv)
+------------------------------------------------------
+
+The output of this script is a compact table where each
+row represents a unique pair of teams.
+
+It includes:
+- matchup frequency (total matches)
+- head-to-head performance (wins and draw rates)
+- scoring behavior (goals and competitiveness)
+- match intensity (cards)
+- match activity (offensive and defensive actions)
+
+This file serves as the matchup-level analytical dataset
+of the project and is designed for comparison,
+visualization, and deeper analysis using Python or
+other tools.
