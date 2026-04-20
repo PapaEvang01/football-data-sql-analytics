@@ -1,0 +1,54 @@
+======================================================
+04_02_team_summary.sql - DESCRIPTION
+======================================================
+
+Description:
+This SQL script creates a final summary table that
+describes the overall performance of each team in the
+dataset.
+
+It builds on the detailed analysis from 02 by combining
+all important team metrics into a single structured
+output.
+
+The goal is to understand:
+- how often each team participates in the league
+- how frequently they win, draw, or lose
+- how their performance differs between home and away
+- and how effective they are in scoring and defending
+
+------------------------------------------------------
+Structure of the Script
+------------------------------------------------------
+
+The script is implemented as a single aggregated query.
+
+It first transforms match-level data into team-level
+data by combining home and away matches into a unified
+structure.
+
+Then, it calculates:
+- total seasons and total matches
+- wins, draws, and losses
+- overall win, loss, and draw rates
+- home and away performance rates
+- average goals scored and conceded
+- average goal difference
+
+------------------------------------------------------
+CSV Output Description (team_summary.csv)
+------------------------------------------------------
+
+The output of this script is a compact table where each
+row represents a team.
+
+It includes:
+- participation metrics (seasons, matches)
+- performance metrics (wins, draws, losses)
+- efficiency metrics (win/loss/draw percentages)
+- home vs away behavior
+- scoring and defensive performance
+
+This file serves as the main analytical dataset of the
+project and is designed for ranking, comparison, and
+visualization using Python or other tools.
