@@ -4,7 +4,7 @@
 
 Description:
 This SQL script creates a final summary table that
-analyzes head-to-head matchups between pairs of teams
+analyzes head-to-head matchups (matches>10) between pairs of teams
 across the entire dataset.
 
 It builds on the detailed exploration from 03 by

@@ -1,0 +1,62 @@
+======================================================
+04 - FINAL ANALYTICAL SUMMARY
+======================================================
+
+
+Description:
+This section contains the final analytical outputs of the
+project, combining the results of previous SQL analysis
+into structured and ready-to-use datasets.
+
+While earlier sections (01, 02, and 03) focused on
+exploration and detailed analysis, this section
+consolidates the most important insights into compact
+summary tables.
+
+The goal is to provide:
+- a clear overview of the dataset
+- a complete evaluation of team performance
+- and a detailed analysis of team matchups
+
+
+------------------------------------------------------
+Structure of the Section
+------------------------------------------------------
+
+The section is divided into three main parts:
+
+04_01 – General Summary  
+Provides a high-level overview of the dataset, including
+size, scoring behavior, match outcomes, and discipline.
+
+04_02 – Team Summary  
+Presents a complete performance profile for each team,
+including participation, results, efficiency, and
+scoring metrics.
+
+04_03 – Matchup Summary  (matches>10)
+Analyzes head-to-head matchups between teams, including
+results, scoring patterns, and match intensity.
+
+
+------------------------------------------------------
+Purpose of the Outputs
+------------------------------------------------------
+
+All outputs in this section are designed to be:
+
+- compact and easy to interpret
+- suitable for CSV export
+- ready for visualization and further analysis in Python
+
+These datasets (04_01, 04_02, and 04_03) are specifically
+structured to support data analytics and forecasting
+tasks using Python, enabling further exploration through
+statistical analysis, visualization, and predictive
+modeling.
+
+Together, they form a complete analytical view of the
+dataset at three levels:
+- global (dataset)
+- individual (team)
+- relational (matchup)
