@@ -17,35 +17,6 @@ The dataset includes multiple seasons of matches with detailed information such 
 
 ---
 
-## 🗂️ Project Structure
-SQL/
-│
-├── 01/
-│ ├── results/
-│ ├── 01_basic_queries.sql
-│ └── 01_description
-│
-├── 02/
-│ ├── results/
-│ ├── 02_description
-│ └── 02_team_performance.sql
-│
-├── 03/
-│ ├── results/
-│ ├── 03_description
-│ └── 03_matchup_analysis.sql
-│
-├── 04/
-│ ├── 04_01/
-│ ├── 04_02/
-│ ├── 04_03/
-│ └── 04_main_description
-│
-└── data/
-├── data_description
-└── pic_of_dataset.png
-
-
 ---
 
 ## 🔍 Section Breakdown
