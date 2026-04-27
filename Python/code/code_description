@@ -1,0 +1,94 @@
+============================================================
+PYTHON EDA – ANALYTICAL VISUALIZATION SUMMARY
+============================================================
+
+Description:
+This script contains the exploratory data analysis (EDA)
+phase of the project, using Python to analyze and visualize
+the structured datasets generated from the SQL section.
+
+While the SQL part (01, 02, and 03) focused on data extraction,
+aggregation, and structuring, this script builds on those
+results by transforming them into visual insights and
+interpretable patterns.
+
+The goal is to provide:
+- a clear visual overview of the dataset
+- an in-depth analysis of team performance
+- a focused exploration of key matchups between top teams
+
+
+------------------------------------------------------------
+Structure of the Script
+------------------------------------------------------------
+
+The script is divided into three main parts:
+
+
+01 – General Overview (04_01.csv)
+Provides a high-level visualization of the dataset,
+including total matches, teams, averages, and overall
+distribution metrics.
+
+This section helps establish context and validate the
+dataset before deeper analysis.
+
+
+02 – Team Performance Analysis (04_02.csv)
+Analyzes team-level performance using multiple approaches:
+
+- Ranking Analysis:
+  Identifies top teams based on wins, win rate, goals scored,
+  and goal difference.
+
+- Comparative Analysis:
+  Examines differences between home and away performance.
+
+- Relationship Analysis:
+  Uses scatter plots to explore connections between key
+  variables such as goals, goal difference, and win rate.
+
+- Correlation Analysis:
+  Uses heatmaps to identify relationships between performance
+  metrics and understand how team statistics interact.
+
+This section provides a complete performance profile
+for each team.
+
+
+03 – Big 5 Matchup Analysis (04_03.csv)
+Focuses on head-to-head matchups between the top teams:
+Arsenal, Manchester City, Manchester United, Chelsea, and Liverpool.
+
+This section includes:
+
+- Scoring Analysis:
+  Evaluates average goals to identify high-scoring rivalries.
+
+- Match Intensity:
+  Measures physical gameplay using fouls, yellow cards,
+  and red cards.
+
+- Performance Overview:
+  Uses heatmaps to compare match behavior across key metrics
+  such as goals, shots, fouls, and corners.
+
+- Dominance Analysis:
+  Evaluates how balanced or one-sided each matchup is based
+  on win rate differences.
+
+This section highlights how top teams interact with each other,
+revealing patterns in competitiveness, playing style, and match dynamics.
+
+
+------------------------------------------------------------
+Summary
+------------------------------------------------------------
+
+This script completes the analytical pipeline of the project,
+transforming structured SQL outputs into meaningful visual
+insights.
+
+It combines statistical analysis with visualization techniques
+to provide a deeper understanding of football performance,
+both at team level and matchup level.
