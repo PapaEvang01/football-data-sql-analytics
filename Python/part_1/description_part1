@@ -1,0 +1,85 @@
+============================================================
+PYTHON PART 1 – EXPLORATORY DATA ANALYSIS (EDA)
+============================================================
+
+Description:
+This section represents the first Python phase of the project,
+focusing on Exploratory Data Analysis (EDA) and visualization.
+
+The datasets used in this part are the final outputs generated
+from the SQL section (04 – Final Analytical Summary). These
+CSV files contain structured and aggregated data, ready for
+analysis.
+
+Using Python (Pandas, Matplotlib, and Seaborn), the data is
+loaded, explored, and transformed into visual representations
+to extract meaningful insights.
+
+The goal of this part is to:
+- validate and understand the structured data from SQL
+- visualize key patterns and relationships
+- provide clear and interpretable insights at different levels
+  (dataset, team, and matchup)
+
+
+------------------------------------------------------------
+Structure of the Analysis
+------------------------------------------------------------
+
+The analysis is divided into three main parts:
+
+01_general:
+Provides a high-level overview of the dataset, including
+basic statistics, scoring behavior, and match outcomes.
+
+02_team_perf:
+Focuses on team-level performance, analyzing wins, win rates,
+goal scoring, defensive behavior, and correlations between
+performance metrics.
+
+03_matchup:
+Examines head-to-head matchups between top teams (Big 5),
+highlighting scoring patterns, match intensity, dominance,
+and overall playing style.
+
+
+------------------------------------------------------------
+Comment on Results
+------------------------------------------------------------
+
+The analysis reveals several important patterns:
+
+- Strong teams consistently perform well across all metrics,
+  combining high scoring with low goals conceded.
+
+- There is a clear relationship between goal difference and
+  win rate, confirming that efficient teams dominate matches.
+
+- Home advantage plays a significant role, with teams generally
+  achieving better results when playing at home.
+
+- Matchups between top teams show different dynamics:
+  some are high-scoring and open, while others are more
+  physical and competitive.
+
+Overall, the visualizations confirm and extend the insights
+derived from the SQL analysis, providing a deeper and more
+intuitive understanding of the data.
+
+
+------------------------------------------------------------
+Next Step – Part 2
+------------------------------------------------------------
+
+In Part 2 of the project, the focus shifts from analysis to
+prediction.
+
+Using the insights and structured data developed in this
+phase, machine learning models will be applied to:
+
+- predict match outcomes
+- estimate scoring behavior
+- analyze team performance patterns
+
+This will transform the project from descriptive analytics
+into a predictive data science application.
