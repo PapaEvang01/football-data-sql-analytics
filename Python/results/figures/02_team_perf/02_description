@@ -1,0 +1,163 @@
+============================================================
+02 – TEAM PERFORMANCE ANALYSIS (04_02.csv)
+============================================================
+
+Description:
+This section analyzes team-level performance using multiple
+visualizations. The goal is to evaluate how teams perform
+in terms of wins, scoring ability, efficiency, and overall
+playing style.
+
+The analysis combines ranking charts, scatter plots, and
+heatmaps to provide both descriptive and relational insights.
+
+
+------------------------------------------------------------
+Diagrams & Analysis
+------------------------------------------------------------
+
+
+1. Top 10 Teams by Total Wins (teams_top_wins.png)
+
+Description:
+This chart ranks teams based on the total number of matches
+won across all seasons.
+
+Comment:
+Top teams such as Manchester City, Manchester United, Chelsea,
+and Liverpool dominate this ranking, reflecting long-term
+consistency and success.
+
+
+------------------------------------------------------------
+
+
+2. Top 10 Teams by Win Rate (teams_win_rate.png)
+
+Description:
+Ranks teams based on their win percentage rather than total wins.
+
+Comment:
+Manchester City stands out with the highest win rate, indicating
+not just participation but efficiency. This metric highlights
+true performance quality.
+
+
+------------------------------------------------------------
+
+
+3. Top 10 Teams by Average Goals Scored (teams_avg_goals.png)
+
+Description:
+Shows the most offensively strong teams based on average goals.
+
+Comment:
+Manchester City leads clearly, followed by Liverpool and Arsenal,
+indicating strong attacking capabilities among top teams.
+
+
+------------------------------------------------------------
+
+
+4. Top 10 Teams by Goal Difference (teams_goal_diff.png)
+
+Description:
+Displays the difference between goals scored and conceded.
+
+Comment:
+Teams with high goal difference (e.g. Manchester City) combine
+strong offense with solid defense, making this one of the most
+important performance indicators.
+
+
+------------------------------------------------------------
+
+
+5. Home vs Away Win Rate (home_vs_away_win_rate.png)
+
+Description:
+Compares team performance when playing at home vs away.
+
+Comment:
+Most teams perform significantly better at home, confirming the
+existence of a strong home advantage in football. However, top
+teams still maintain solid performance away from home.
+
+
+------------------------------------------------------------
+
+
+6. Attacking vs Defensive Profile (teams_attack_vs_defense_scatter.png)
+
+Description:
+Scatter plot showing average goals scored vs goals conceded.
+
+Comment:
+Top teams (e.g. Manchester City, Liverpool) are located in the
+bottom-right area, meaning high scoring and low conceding.
+Weaker teams tend to concede more and score less.
+
+
+------------------------------------------------------------
+
+
+7. Win Rate vs Goal Difference (winrate_vs_goaldiff.png)
+
+Description:
+Scatter plot analyzing the relationship between goal difference
+and win rate.
+
+Comment:
+There is a strong positive relationship: teams with higher goal
+difference tend to have higher win rates. This confirms that
+goal difference is a key predictor of success.
+
+
+------------------------------------------------------------
+
+
+8. Correlation Heatmap of Team Metrics (team_correlation_heatmap.png)
+
+Description:
+Shows correlations between wins, win rate, goals scored,
+goals conceded, and goal difference.
+
+Comment:
+Strong positive correlations exist between:
+- win rate and goal difference
+- wins and goals scored
+
+Negative correlation is observed with goals conceded,
+highlighting the importance of defensive performance.
+
+
+------------------------------------------------------------
+
+
+9. Home vs Away Correlation Heatmap (home_away_correlation.png)
+
+Description:
+Shows relationships between home and away performance metrics.
+
+Comment:
+Strong negative correlations between wins and losses confirm
+expected behavior (more wins → fewer losses).
+A strong positive relationship between home and away win rates
+suggests that strong teams perform well in both conditions.
+
+
+------------------------------------------------------------
+Summary
+------------------------------------------------------------
+
+This section provides a comprehensive evaluation of team
+performance by combining ranking, comparison, and correlation
+analysis.
+
+It highlights that successful teams:
+- score more goals
+- concede fewer goals
+- maintain strong performance both home and away
+
+These insights form the foundation for understanding team
+behavior before moving into detailed matchup analysis.
